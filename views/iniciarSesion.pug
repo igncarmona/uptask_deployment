@@ -4,14 +4,14 @@ html(lang="en")
         include partials/header
     body.login 
         .contenedor-formulario 
-            h1 Inicia Sesion en UpTask
+            h1 Login in 
             
             if locals.mensajes
                 .alertas
                     each categoria in Object.keys(locals.mensajes)
                         each error in mensajes[categoria]
                             .alerta(class=`${categoria}`)
-                                p= `${error == 'usuarios.usuarios_email_unique must be unique'? 'EL USUARIO YA EXISTE': error}`
+                                p= `${error == ''? '': error}`
                
                
             form#formulario.caja.caja-login(method="POST" action="/iniciar-sesion")
@@ -24,5 +24,5 @@ html(lang="en")
                 .campo.enviar
                     input.boton(type="submit" value="Iniciar Sesión")
                 .campo.acciones
-                    a(href="/crear-cuenta") ¿Aún no tienes cuenta? Crea una Gratis
-                    a(href="/reestablecer") ¿Olvidaste tu constraseña?        
+                    a(href="/crear-cuenta") 
+                    a(href="/reestablecer")         
