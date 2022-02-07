@@ -28,11 +28,7 @@ passport.use(
                     })
                 }
                 // el usuario existe pero no esta activo
-                if(!usuario.activo){
-                    return done(null, false, {
-                        message : 'Debe activar su cuenta'
-                })
-            }
+                //aaaaaaaaaaaaa
 
 
                 // El email existe, y el password es correcto
