@@ -17,12 +17,12 @@ html(lang="en")
             form#formulario.caja.caja-login(method="POST" action="/iniciar-sesion")
                 .campo
                     label(for="email") E-mail:
-                    input(type="text" name="email" placeholder="Tu Email" value= email )
+                    input(type="text" name="email" placeholder="" value= email )
                 .campo
                     label(for="password") Password:
-                    input(type="password" name="password" placeholder="Tu Password" value= password )
+                    input(type="password" name="password" placeholder=" " value= password )
                 .campo.enviar
-                    input.boton(type="submit" value="Iniciar Sesión")
+                    input.boton(type="submit" value="Login in")
                 .campo.acciones
                     a(href="/crear-cuenta") 
                     a(href="/reestablecer")         
