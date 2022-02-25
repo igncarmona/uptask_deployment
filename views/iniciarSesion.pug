@@ -1,28 +1,110 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@igncarmona 
+seba-cabrera
+/
+uptask_deployment
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+You’re making changes in a project you don’t have write access to. Submitting a change will write it to a new branch in your fork igncarmona/uptask_deployment, so you can send a pull request.
+uptask_deployment
+/
+views
+/
+iniciarSesion.pug
+in
+seba-cabrera:master
+ 
+
+Spaces
+
+4
+
+No wrap
+1
 doctype html
+2
 html(lang="en")
+3
     head
+4
         include partials/header
+5
     body.login 
+6
         .contenedor-formulario 
-            h1 Login in 
+7
+            h1 Inicia Sesion en UpTask
+8
             
+9
             if locals.mensajes
+10
                 .alertas
+11
                     each categoria in Object.keys(locals.mensajes)
+12
                         each error in mensajes[categoria]
+13
                             .alerta(class=`${categoria}`)
-                                p= `${error == ''? '': error}`
+14
+                                p= `${error == 'usuarios.usuarios_email_unique must be unique'? 'EL USUARIO YA EXISTE': error}`
+15
                
+16
                
+17
             form#formulario.caja.caja-login(method="POST" action="/iniciar-sesion")
+18
                 .campo
+19
                     label(for="email") E-mail:
-                    input(type="text" name="email" placeholder="" value= email )
+20
+                    input(type="text" name="email" placeholder="Tu Email" value= email )
+21
                 .campo
+22
                     label(for="password") Password:
-                    input(type="password" name="password" placeholder=" " value= password )
+23
+                    input(type="password" name="password" placeholder="Tu Password" value= password )
+24
                 .campo.enviar
-                    input.boton(type="submit" value="Login in")
+25
+                    input.boton(type="submit" value="Iniciar Sesión")
+26
                 .campo.acciones
-                    a(href="/crear-cuenta") 
-                    a(href="/reestablecer")         
+27
+                    a(href="/crear-cuenta") ¿Aún no tienes cuenta? Crea una Gratis
+28
+                    a(href="/reestablecer") ¿Olvidaste tu constraseña?        
+@igncarmona
+Propose changes
+Commit summary
+Create iniciarSesion.pug
+Optional extended description
+Add an optional extended description…
+ 
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
